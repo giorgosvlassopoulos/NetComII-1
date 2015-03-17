@@ -27,7 +27,6 @@ public class CLIENTConnection implements Runnable {
         this.clientSocket = client;
     }
 
-    //TEST FOR COMMENTS
     @Override
     public void run() {
         BufferedReader instream = null;

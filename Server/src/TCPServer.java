@@ -8,7 +8,7 @@ public class TCPServer {
     private static Socket clientSocket = null;
 
     public static void main(String[] args) throws IOException {
-        //dokimazoume na syndethoume
+        //Try to connect
         try {
             serverSocket = new ServerSocket(25);
             System.out.println("Server started.");
@@ -25,7 +25,7 @@ public class TCPServer {
                 Thread t = new Thread(new CLIENTConnection(clientSocket));
 
                 t.start();
-                //trexoume to thread tou server
+                //Run the thread of the server
 
             } catch (Exception e) {
                 System.err.println("Error in connection attempt.");
