@@ -32,7 +32,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         try{
-            Socket sock = new Socket("localhost", 4444);
+            Socket sock = new Socket("localhost", 25);
 
             BufferedReader instream = new BufferedReader (new InputStreamReader(sock.getInputStream()));
             BufferedWriter outstream = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream()));
