@@ -10,7 +10,7 @@ public class TCPServer {
     public static void main(String[] args) throws IOException {
         //dokimazoume na syndethoume
         try {
-            serverSocket = new ServerSocket(4444);
+            serverSocket = new ServerSocket(25);
             System.out.println("Server started.");
         } catch (Exception e) {
             System.err.println("Port already in use.");
