@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -10,6 +11,7 @@ public class TCPServer {
     public static void main(String[] args) throws IOException {
         //Try to connect
         try {
+            //define the port 
             serverSocket = new ServerSocket(25);
             System.out.println("Server started.");
         } catch (Exception e) {
@@ -21,8 +23,8 @@ public class TCPServer {
             try {
                 clientSocket = serverSocket.accept();
                 System.out.println("Accepted connection : " + clientSocket);
-                
-                Thread t = new Thread(new CLIENTConnection(clientSocket));
+
+                Thread t = new Thread(new CLIENTConnection(clientSocket, serverSocket));
 
                 t.start();
                 //Run the thread of the server
